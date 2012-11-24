@@ -1,5 +1,5 @@
 <?php
-namespace app2;
+namespace app3;
 /**
  * The Welcome Controller.
  *
@@ -9,7 +9,7 @@ namespace app2;
  * @package  app
  * @extends  Controller
  */
-class Controller_Welcome extends \app1\Controller_Welcome
+class Controller_Welcome extends \app2\Controller_Welcome
 {
 
 	/**
@@ -20,10 +20,7 @@ class Controller_Welcome extends \app1\Controller_Welcome
 	 */
 	public function action_index()
 	{
-		echo 2;
-	}
-	public function action_index2(){
-		echo "app 2";
+		echo 3;
 	}
 
 }
