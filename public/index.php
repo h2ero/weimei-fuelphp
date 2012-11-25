@@ -28,7 +28,7 @@ define('DOCROOT', __DIR__.DIRECTORY_SEPARATOR);
 /**
  * Path to the application directory.
  */
-define('APPPATH', realpath(__DIR__.'/../fuel/app/'.$app).DIRECTORY_SEPARATOR);
+define('APPPATH', realpath(__DIR__.'/../app/'.$app).DIRECTORY_SEPARATOR);
 
 /**
  * Path to the default packages directory.
