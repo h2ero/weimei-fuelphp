@@ -193,6 +193,7 @@ return array(
 	 */
 	'module_paths' => array(
 		//APPPATH.'modules'.DS
+		APPPATH.'../',
 	),
 
 	/**
