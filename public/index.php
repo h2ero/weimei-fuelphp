@@ -6,7 +6,7 @@
 define('SERVER_NAME', $_SERVER['SERVER_NAME']);
 define('DEFAULT_APP', 'app2');
 $app_list=array(
-			'h2ero.xf'=>'app2',
+			'h2ero.xf'=>'app1',
 			'h2ero.xh'=>'app1',
 			);
 $app=isset($app_list[SERVER_NAME])?$app_list[SERVER_NAME]:DEFAULT_APP;

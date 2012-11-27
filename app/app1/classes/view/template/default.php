@@ -8,9 +8,14 @@
 		<meta name="description" content="" />
 		<link rel="shortcut icon" href="favicon.ico"/>
 		<!-- Date: 2011-10-23 -->
-		<?php echo Asset::css($css);?>
-		<?php echo Asset::js($js);?>
-		
+		<link rel="stylesheet/less" href="/style/css/style.less">
+		<link rel=stylesheet type=text/css href='/style/css/base.css'>
+		<link rel=stylesheet type=text/css href='/style/css/fancybox/jquery.fancybox-1.3.4.css'>
+		<script src='/style/js/jquery-1.7.2.min.js'></script>
+		<script src='/style/js/less-1.3.0.min.js'></script>
+		<script src='/style/js/main.js'></script>
+		<script src='/style/js/jquery.fancybox-1.3.4.js'></script>
+				<script src='/style/js/simpleStyle.js'></script>
 		<script type="text/javascript">
 		var baseurl='http://weimei.de/';
 		var siteurl='http://weimei.de/';
