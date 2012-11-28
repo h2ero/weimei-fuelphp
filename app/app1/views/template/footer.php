@@ -1,5 +1,5 @@
 <div id="footer">
-	<div id="copyright">Copyright © 2012 唯美小站</div>
+	<div id="copyright">Copyright © 2012 <?php echo $site_name;?></div>
 	<div id="about">
 		<a href="/article/1">关于我们</a>|
 		<a href="#">免责声明</a>|

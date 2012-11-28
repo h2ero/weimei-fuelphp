@@ -2,20 +2,16 @@
 <HTML xmlns="http://www.w3.org/1999/xhtml">
 	<HEAD>
 		<META content="text/html; charset=utf-8" http-equiv=Content-Type>
-		<title>爱的规则，自由的条件-唯美小站WeiMei.De</title>
+		<title><?php echo $title;?></title>
 		<meta name="author" content="h2ero" />
-		<meta name="keywords" content="爱的规则，自由的条件" />
-		<meta name="description" content="" />
+		<meta name="keywords" content="<?php echo $keywords;?>" />
+		<meta name="description" content="<?php echo $description;?>" />
 		<link rel="shortcut icon" href="favicon.ico"/>
 		<!-- Date: 2011-10-23 -->
+		<link rel="stylesheet/less" href="/assets/css/style.less">
 		<?php echo Asset::css($css);?>
 		<?php echo Asset::js($js);?>
-		
 		<script type="text/javascript">
-		var baseurl='http://weimei.de/';
-		var siteurl='http://weimei.de/';
-		var album_id='';
-		var target='';
 		</script>
 	</head>
 	<body>
