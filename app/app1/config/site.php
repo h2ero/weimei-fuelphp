@@ -2,7 +2,7 @@
 return array(
 		'css'=>array(
 				'base css'=>'base.css',
-				'base css'=>'fancybox/jquery.fancybox-1.3.4.css',
+				'fancybox css'=>'fancybox/jquery.fancybox-1.3.4.css',
 				),
 		'js'=>array(
 				'jquery'=>'jquery-1.7.2.min.js',

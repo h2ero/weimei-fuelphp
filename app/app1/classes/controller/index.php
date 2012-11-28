@@ -9,7 +9,7 @@ namespace app1;
  * @package  app
  * @extends  Controller
  */
-class Controller_Welcome extends \Controller
+class Controller_index extends Controller_Template
 {
 
 	/**
@@ -20,7 +20,7 @@ class Controller_Welcome extends \Controller
 	 */
 	public function action_index()
 	{
-		echo 1;
+		
 	}
 
 	public function action_hello()

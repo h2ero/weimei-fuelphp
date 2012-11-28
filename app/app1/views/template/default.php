@@ -15,17 +15,18 @@
 		</script>
 	</head>
 	<body>
+<div id="container">
 	<?php echo $header;?>
-		<div id="container">
 		<div id="main">
 			<div id="left">
-			</div><!---left end--->
+			</div>
+			<!---left end--->
 			<div id="right">
 			</div>
 			<div class="fn-clear"></div>
 		</div>
-		</div>
-		<!--container-->
 	<?php echo $footer;?>
+</div>
+<!--container-->
 	</body>
 </html>

@@ -43,7 +43,7 @@ return array(
 	 */
 	'index_file'  => 'index.php',
 
-	'profiling'  => true,
+	'profiling'  => false,
 
 	/**
 	 * Default location for the file cache
