@@ -1,30 +1,18 @@
 <?php
 namespace app1;
-/**
- * The Welcome Controller.
- *
- * A basic controller example.  Has examples of how to set the
- * response body and status.
- * 
- * @package  app
- * @extends  Controller
- */
+
 class Controller_index extends Controller_Template
 {
 
-	/**
-	 * The basic welcome message
-	 * 
-	 * @access  public
-	 * @return  Response
-	 */
+	public function before() 
+	{
+		parent::before();
+	}
 	public function action_index()
 	{
-		
-	}
-
-	public function action_hello()
-	{
-		echo 1;
+		$this->template->nav_bar=\View::forge('content/index/nav-bar');
+		$this->template->slogan=\View::forge('content/index/slogan');
+		$this->template->pagelist=\View::forge('content/index/pagelist');
+		$this->template->link=\View::forge('content/index/link');
 	}
 }
