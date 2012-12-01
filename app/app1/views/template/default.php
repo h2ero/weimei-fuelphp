@@ -17,14 +17,12 @@
 	<body>
 <div id="container">
 	<?php echo $header;?>
+	<?php echo $slogan;?>
+	<?php echo $nav_bar;?>
 		<div id="main">
-			<div id="left">
-			</div>
-			<!---left end--->
-			<div id="right">
-			</div>
-			<div class="fn-clear"></div>
+			<?php echo $content; ?>
 		</div>
+	<?php echo $link;?>
 	<?php echo $footer;?>
 </div>
 <!--container-->

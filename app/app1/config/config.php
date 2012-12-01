@@ -226,7 +226,7 @@ return array(
 		 * );
 		 */
 		'packages'  => array(
-			//'orm',
+			'orm',
 		),
 
 		/**

@@ -4,7 +4,7 @@
  */
 
 define('SERVER_NAME', $_SERVER['SERVER_NAME']);
-define('DEFAULT_APP', 'app2');
+define('DEFAULT_APP', 'app1');
 $app_list=array(
 			'h2ero.xf'=>'app1',
 			'h2ero.xh'=>'app1',
