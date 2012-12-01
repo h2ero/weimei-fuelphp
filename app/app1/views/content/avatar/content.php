@@ -9,25 +9,16 @@
 <div class="fn-clear"></div>
 </div>
 <?php echo $like; ?>
-<?php echo $comment?>
+<?php echo $comment; ?>
+</div>
 <!---left end--->
 <div id="right">
 	<div id="r-u-a" class="right-box">
 	<h2 class="h2-t">WHO...?</h2>
 	<a href="/user/i/1"><img src="/uploads/icon/1.jpg.min.jpg"></a><span><a href="/user/i/1">h2ero</a>2012-03-03 19:15:27</span>
 	</div>
-		<!-- right user msg end-->
-	<div id="labels" class="right-box">
-		<h2 class="h2-t">标签...</h2>
-	<div id="labels-list">
-				</div>
-		<div class="fn-clear"></div>
-		<div class="labels-add"><span>添加标签有助于整理你的分享，多个标签请用逗号分隔</span>
-<br>
-<form method="post"><input name="tags" id="tags" placeholder="标签1,标签2,标签3" type="text"><input id="tag-btn" class="red-btn" value="添加" type="button"> 
-<input id="tid" name="tid" value="a4" type="hidden"></form>
-</div>
-	</div>
-	<!--tags end -->
+	<!-- right user msg end-->
+<?php echo $tag ?>
+	
 </div>
 <div class="fn-clear"></div>
