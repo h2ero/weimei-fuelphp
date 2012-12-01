@@ -13,6 +13,10 @@ return array(
 	 */
 	'default' => array(
 		'type'        => 'pdo',
+	    	'host'	      => '127.0.0.1',
+	    	'username'    => 'root',
+	    	'password'    => '',
+	    	'database'    => 'weimei',
 		'connection'  => array(
 			'persistent' => false,
 		),
