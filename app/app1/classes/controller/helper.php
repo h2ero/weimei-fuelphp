@@ -79,7 +79,6 @@ Class Helper {
 
 
 	static function get_mini_pic($src) {
-		$src='/uploads/icon/1.jpg';
 		return $src . '.min.' . self::get_ext($src);
 	}
 
@@ -111,9 +110,16 @@ Class Helper {
 		curl_close($ch);
 		return true;
 	}
+	//std sort;
+	static function heightSort($a,$b){
+		if($a['height']>$b['height'])
+			return 0;
+		else
+			return 1;
+	}
 
 	static function sort3Array($array) {
-		usort($array);
+		usort($array,'self::heightSort');
 		$a = $b = $c = 0;
 		$count = count($array);
 		for ($i = 0; $i < $count - 1; $i++) {
@@ -142,7 +148,7 @@ Class Helper {
 	}
 
 	static function sort2Array($array) {
-		usort($array);
+		usort($array,'self::heightSort');
 		$a = $b = 0;
 		$count = count($array);
 		for ($i = 0; $i < $count - 1; $i++) {
