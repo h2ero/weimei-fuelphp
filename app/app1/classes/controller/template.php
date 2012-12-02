@@ -24,6 +24,7 @@ class Controller_Template extends \Controller_Template{
 		$this->template->nav_bar='';
 		$this->template->pagelist='';
 		$this->template->content='';
+		$this->template->pagination='';
 	}
 	public function action_index(){
 	}

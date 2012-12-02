@@ -22,6 +22,7 @@
 		<div id="main">
 			<?php echo $content; ?>
 		</div>
+	<?php echo $pagination;?>
 	<?php echo $link;?>
 	<?php echo $footer;?>
 </div>
