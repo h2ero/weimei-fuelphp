@@ -7,7 +7,7 @@ $(function(){
 	/*图片对齐*/
 	//$('.pic-desc').hide();
 	//pageCount count-prePageCount
-	var pageCount=$('#main').attr('data-count');
+	var pageCount=$('#pic').attr('data-count');
 	var countArr=pageCount.split('-');
 	if(parseInt(countArr[0])>parseInt(countArr[1])){
 	$('.pic-list').each(function(){
