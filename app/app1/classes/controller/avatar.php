@@ -24,16 +24,25 @@ class Controller_Avatar extends Controller_Template{
 		$target_id='a'.$id;
 		$this->template->content=\View::forge('content/avatar/content');
 		$avatar=Model_Avataralbum::query()->related('avatar')->where('id',$id)->get();
-		$this->template->content->avatar=$avatar;
-		$this->template->title=$avatar[1]['name'];
-		//widget
-		$this->template->content->like=\View::forge('template/widget/like');
-		$this->template->content->like->like_count=$avatar[1]['like_count'];
-		$this->template->content->like->like_user= Model_User::get_like_user($target_id);
-		$this->template->content->comment=\View::forge('template/widget/comment');
-		$this->template->content->comment->comment=  Model_Comment::get_comment($target_id);
-		$this->template->content->tag=\View::forge('template/widget/tag');
-		$this->template->content->tag->tag=  Model_Tag::get_tag($target_id);
+		if($avatar)
+		{
+			$avatar['res']=$avatar[$id];
+			unset($avatar['id']);
+			$this->template->content->avatar=$avatar;
+			$this->template->title=$avatar['res']['name'];
+			//widget
+			$this->template->content->like=\View::forge('template/widget/like');
+			$this->template->content->like->like_count=$avatar['res']['like_count'];
+			$this->template->content->like->like_user= Model_User::get_like_user($target_id);
+			$this->template->content->comment=\View::forge('template/widget/comment');
+			$this->template->content->comment->comment=  Model_Comment::get_comment($target_id);
+			$this->template->content->tag=\View::forge('template/widget/tag');
+			$this->template->content->tag->tag=  Model_Tag::get_tag($target_id);
+		}
+ 		else
+		{
+			\Response::redirect('/error/404');
+		}
 	}
 
 }

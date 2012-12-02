@@ -1,10 +1,10 @@
 <div id="left">
-<h1 id="title"><?php echo $avatar[1]['name'] ?></h1>
+<h1 id="title"><?php echo $avatar['res']['name'] ?></h1>
 <div class="height1"></div>
 <div id="avatarShowAll">
 <div style="display: none; left: 301px; top: 466px;" id="show"><img src="/uploads/20120303/1330773474_562.jpg"></div>
-<?php foreach($avatar[1]['avatar'] as $a){ ?>
-<li><img src="<?php echo $a->src; ?>" alt="<?php echo $avatar[1]['name'] ?>"></li>
+<?php foreach($avatar['res']['avatar'] as $a){ ?>
+<li><img src="<?php echo $a->src; ?>" alt="<?php echo $avatar['res']['name'] ?>"></li>
 <?php } ?>
 <div class="fn-clear"></div>
 </div>
