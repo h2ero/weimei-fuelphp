@@ -27,6 +27,21 @@ class Model_Avatar extends \Orm\Model {
 			->on('user_id','=','user.id')
 			->execute()->as_array();
 	}
+	public static function get_list($page,$count){
+
+		return \DB::select('name','avatar_album.id','src','username','user_id','date')
+			->from('avatar_album')
+			->order_by('album_id','desc')
+			->limit($count)
+			->offset($page*$count)
+			->join('avatar')
+			->on('avatar.id','=','avatar_album.id')
+			->join('user')
+			->on('user.id','=','avatar_album.user_id')
+			->execute()
+			->as_array();
+
+	}
 }
 
 ?>

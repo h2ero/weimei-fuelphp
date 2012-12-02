@@ -14,22 +14,34 @@ class Controller_Avatar extends Controller_Template {
 		parent::before();
 	}
 
-	public function action_index() {
+	public function action_list($page=0) {
 
 		$count=\DB::select(\DB::expr('count(*) as count'))->from('avatar_album')->execute();
 
 		$config = array(
 		    'pagination_url' => '/avatar/list/',
 		    'total_items' => $count[0]['count'],
-		    'per_page' => 1,
+		    'per_page' => 12,
 		    'uri_segment' => 2,
 		);
 
-		$pagination = \Pagination::forge('mypagination', $config);
+		$pagination = \Pagination::forge('avatar_pagination', $config);
 		$this->template->set('pagination',$pagination->render(),FALSE);
+		$avatar=Model_Avatar::get_list($page, $config['per_page']);
+		if($avatar){
+
+			$this->template->content=\View::forge('content/avatar/list');
+			$this->template->content->avatar= $avatar;
+
+		}else{
+
+			\Response::redirect('error/404');
+
+		}
+
 	}
 
-	public function action_content($id = 4) {
+	public function action_content($id = 1) {
 		$target_id = 'a' . $id;
 		$this->template->content = \View::forge('content/avatar/content');
 		$avatar = Model_Avatar::get_avatar($id);
