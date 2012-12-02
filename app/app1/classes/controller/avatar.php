@@ -16,6 +16,7 @@ class Controller_Avatar extends Controller_Template{
 
 	public function action_index()
 	{
+		
 
 	}
 
@@ -23,16 +24,14 @@ class Controller_Avatar extends Controller_Template{
 	{
 		$target_id='a'.$id;
 		$this->template->content=\View::forge('content/avatar/content');
-		$avatar=Model_Avataralbum::query()->related('avatar')->where('id',$id)->get();
+		$avatar= Model_Avatar::get_avatar($id);
 		if($avatar)
 		{
-			$avatar['res']=$avatar[$id];
-			unset($avatar['id']);
 			$this->template->content->avatar=$avatar;
-			$this->template->title=$avatar['res']['name'];
+			$this->template->title=$avatar[0]['name'];
 			//widget
 			$this->template->content->like=\View::forge('template/widget/like');
-			$this->template->content->like->like_count=$avatar['res']['like_count'];
+			$this->template->content->like->like_count=$avatar[0]['like_count'];
 			$this->template->content->like->like_user= Model_User::get_like_user($target_id);
 			$this->template->content->comment=\View::forge('template/widget/comment');
 			$this->template->content->comment->comment=  Model_Comment::get_comment($target_id);

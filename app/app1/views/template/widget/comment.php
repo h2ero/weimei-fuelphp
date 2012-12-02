@@ -12,7 +12,7 @@
 <div class="cc-bottom"></div>
 </div>
 <?php if($key%2){ ?>
-	<a class="commentsAvatar" href="/user/i/<?=$c['user_id']?>"><img src="<?=  Helper::get_mini_pic($c['user']['icon'])?>"></a>
+	<a class="commentsAvatar" href="/user/i/<?=$c['user_id']?>"><img src="<?=Helper::get_mini_pic($c['user']['icon'])?>"></a>
 <?php }?>
 </div>
 <?php }?>
