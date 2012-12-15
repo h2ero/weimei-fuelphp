@@ -10,6 +10,8 @@ return array(
 	'article/list/(.*)'=>APP_NAME.'/article/list/$1',
 	'article/(.*)'=>APP_NAME.'/article/content/$1',
 	'article'=>APP_NAME.'/article/list/1',
+    	//tag
+	'tag/(.*)'=>APP_NAME.'/tag/search/$1',
 
 	'(.+)/(.*)'=>APP_NAME.'/$1/$2',
 	'(.+)'=>APP_NAME.'/$1',
