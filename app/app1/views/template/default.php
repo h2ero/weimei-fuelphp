@@ -21,6 +21,7 @@
 	<?php echo $nav_bar;?>
 		<div id="main">
 			<?php echo $content; ?>
+			<div class="fn-clear"></div>
 		</div>
 	<?php echo $pagination;?>
 	<?php echo $link;?>

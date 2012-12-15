@@ -5,14 +5,14 @@
 if(isset($result['a']))
 foreach ($result['a'] as $r){
 ?>
-<div class='tag-item'><a href="/avatar/one/<?php echo $r['id']; ?>" class='e-t'><?php echo $r['name']; ?></a><?php echo "${r['username']}|${r['date']}"; ?> ◆头</div>
+<div class='tag-item'><a href="/avatar/<?php echo $r['id']; ?>" class='e-t'><?php echo $r['name']; ?></a><?php echo "${r['username']}|${r['date']}"; ?> ◆头</div>
 <?php
 }
 if(isset($result['p']))
 foreach ($result['p'] as $r){
 ?>
 
-<div class='tag-item'><a href='/pic/one/<?php echo $r['id']; ?>' class='e-t'><?php echo $r['name'] ?></a><?php echo "${r['username']}|${r['date']}"; ?> ◆图</div>
+<div class='tag-item'><a href='/pic/<?php echo $r['id']; ?>' class='e-t'><?php echo $r['name'] ?></a><?php echo "${r['username']}|${r['date']}"; ?> ◆图</div>
 
 <?php
 }
