@@ -14,7 +14,8 @@ class Controller_Avatar extends Controller_Template {
 		parent::before();
 	}
 
-	public function action_list($page=0) {
+	public function action_list($page=1) {
+		$page=$page-1;
 
 		$count=\DB::select(\DB::expr('count(*) as count'))->from('avatar_album')->execute();
 

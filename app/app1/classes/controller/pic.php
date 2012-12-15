@@ -12,7 +12,7 @@ class Controller_Pic extends Controller_Template {
 	}
 
 	public function action_list($page) {
-
+		$page=$page-1;
 		$count = \DB::select(\DB::expr('count(*) as count'))->from('pic')->execute();
 		$config = array(
 		    'pagination_url' => '/pic/list/',

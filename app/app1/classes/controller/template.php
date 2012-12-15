@@ -15,7 +15,8 @@ class Controller_Template extends \Controller_Template{
 		$this->template->js=$site_config['js'];
 		
 		$this->template->footer->site_name=$site_config['site_name'];
-		$this->template->title=$site_config['title'];
+		$this->template->title='';
+		$this->template->site_title=$site_config['title'];
 		$this->template->keywords=$site_config['keywords'];
 		$this->template->description=$site_config['description'];
 

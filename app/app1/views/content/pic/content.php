@@ -7,6 +7,7 @@
 	</p>
 	<div class="fn-clear"></div>
 	<?php echo $like; ?>
+<h2 class="h2-t"><img src="/assets/images/location.png"><a target="_blank" href="<?php echo $pic['location']; ?>" id="location"><?php echo $pic['location']; ?></a></h2>
 	<?php echo $comment;?>
 </div>
 
