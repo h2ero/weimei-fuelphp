@@ -14,5 +14,6 @@ class Controller_index extends Controller_Template
 		$this->template->slogan=\View::forge('content/index/slogan');
 		$this->template->pagelist=\View::forge('content/index/pagelist');
 		$this->template->link=\View::forge('content/index/link');
+		
 	}
 }

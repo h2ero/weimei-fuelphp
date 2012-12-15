@@ -12,7 +12,7 @@ return array(
 				'simple style'=>'simpleStyle.js',
 				),
 		'site_name'=>'唯美小站',
-		'title'=>'weimei.de',
+		'title'=>'-唯美小站WeiMei.De',
 		'keywords'=>'site config keywords',
 		'description'=>'description'
 );
