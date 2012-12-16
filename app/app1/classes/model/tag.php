@@ -68,7 +68,7 @@ class Model_tag extends \Orm\Model{
 				->from('article')
 				->where('article.id','IN',$e_id)
 				->join('user')
-				->on('article.userId','=','user.id')
+				->on('article.user_id','=','user.id')
 				->execute()
 				->as_array();
 			$tags['e']=$result;

@@ -19,7 +19,7 @@ foreach ($result['p'] as $r){
 if(isset($result['e']))
 foreach ($result['e'] as $r){
 ?>
-<div class='tag-item'><a href='/article/view/<?php echo $r['id'] ?>' class='e-t'><?php echo $r['name']; ?></a><?php echo "${r['username']}|${r['date']}"; ?> ◆文</div>
+<div class='tag-item'><a href='/article/<?php echo $r['id'] ?>' class='e-t'><?php echo $r['name']; ?></a><?php echo "${r['username']}|${r['date']}"; ?> ◆文</div>
 <?php }?>
 </div>
 <div class="fn-clear"></div>
