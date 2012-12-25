@@ -6,9 +6,9 @@
 define('SERVER_NAME', $_SERVER['SERVER_NAME']);
 define('DEFAULT_APP', 'app1');
 $app_list=array(
-			'h2ero.xf'=>'app1',
-			'h2ero.xh'=>'app1',
-			);
+            'h2ero.xf'=>'app1',
+            'h2ero.xh'=>'app1',
+            );
 $app=isset($app_list[SERVER_NAME])?$app_list[SERVER_NAME]:DEFAULT_APP;
 define('APP_NAME',$app);
 
@@ -50,40 +50,40 @@ require APPPATH.'bootstrap.php';
 // Generate the request, execute it and send the output.
 try
 {
-	$response = Request::forge()->execute()->response();
+    $response = Request::forge()->execute()->response();
 }
 catch (HttpNotFoundException $e)
 {
-	$route = array_key_exists('_404_', Router::$routes) ? Router::$routes['_404_']->translation : Config::get('routes._404_');
+    $route = array_key_exists('_404_', Router::$routes) ? Router::$routes['_404_']->translation : Config::get('routes._404_');
 
-	if($route instanceof Closure)
-	{
-		$response = $route();
-		
-		if( ! $response instanceof Response)
-		{
-			$response = Response::forge($response);
-		}
-	}
-	elseif ($route)
-	{
-		$response = Request::forge($route, false)->execute()->response();
-	}
-	else
-	{
-		throw $e;
-	}
+    if($route instanceof Closure)
+    {
+        $response = $route();
+        
+        if( ! $response instanceof Response)
+        {
+            $response = Response::forge($response);
+        }
+    }
+    elseif ($route)
+    {
+        $response = Request::forge($route, false)->execute()->response();
+    }
+    else
+    {
+        throw $e;
+    }
 }
 
 // This will add the execution time and memory usage to the output.
 // Comment this out if you don't use it.
 $bm = Profiler::app_total();
 $response->body(
-	str_replace(
-		array('{exec_time}', '{mem_usage}'),
-		array(round($bm[0], 4), round($bm[1] / pow(1024, 2), 3)),
-		$response->body()
-	)
+    str_replace(
+        array('{exec_time}', '{mem_usage}'),
+        array(round($bm[0], 4), round($bm[1] / pow(1024, 2), 3)),
+        $response->body()
+    )
 );
 
 $response->send(true);

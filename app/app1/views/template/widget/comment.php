@@ -3,16 +3,16 @@
 <?php foreach ($comment as $key=>$c){?>
 <div class="commentsItem<?if($key%2){echo '-r';}?>">
 <?php if($key%2==0){ ?>
-	<a class="commentsAvatar" href="/user/i/<?=$c['user_id']?>"><img src="<?=Helper::get_mini_pic($c['user']['icon']);?>"></a>
+    <a class="commentsAvatar" href="/user/i/<?=$c['user_id']?>"><img src="<?=Helper::get_mini_pic($c['user']['icon']);?>"></a>
 <?php }?>
 <div class="reply-doc">
-	<div class="commentsMsg"><a href="/user/i/<?=$c['user_id']?>"><?=$c['user']['username']?></a>于<?=Helper::get_time(strtotime($c['date']));?>说|<a class="reply" href="#reply" >回复</a></div>
+    <div class="commentsMsg"><a href="/user/i/<?=$c['user_id']?>"><?=$c['user']['username']?></a>于<?=Helper::get_time(strtotime($c['date']));?>说|<a class="reply" href="#reply" >回复</a></div>
 <div class="cc-top"></div>
 <div class="commentsContent"><p><?=$c['content']?></p></div>
 <div class="cc-bottom"></div>
 </div>
 <?php if($key%2){ ?>
-	<a class="commentsAvatar" href="/user/i/<?=$c['user_id']?>"><img src="<?=Helper::get_mini_pic($c['user']['icon'])?>"></a>
+    <a class="commentsAvatar" href="/user/i/<?=$c['user_id']?>"><img src="<?=Helper::get_mini_pic($c['user']['icon'])?>"></a>
 <?php }?>
 </div>
 <?php }?>

@@ -13,12 +13,12 @@
 </div>
 <!---left end--->
 <div id="right">
-	<div id="r-u-a" class="right-box">
-	<h2 class="h2-t">WHO...?</h2>
-	<a href="/user/i/<?php echo $avatar[0]['user_id'] ?>"><img src="<?php echo Helper::get_mini_pic($avatar[0]['icon']); ?>"></a><span><a href="/user/i/<?php echo $avatar[0]['user_id'];?>"></a><?php echo $avatar[0]['date'];?></span>
-	</div>
-	<!-- right user msg end-->
+    <div id="r-u-a" class="right-box">
+    <h2 class="h2-t">WHO...?</h2>
+    <a href="/user/i/<?php echo $avatar[0]['user_id'] ?>"><img src="<?php echo Helper::get_mini_pic($avatar[0]['icon']); ?>"></a><span><a href="/user/i/<?php echo $avatar[0]['user_id'];?>"></a><?php echo $avatar[0]['date'];?></span>
+    </div>
+    <!-- right user msg end-->
 <?php echo $tag ?>
-	
+    
 </div>
 <div class="fn-clear"></div>

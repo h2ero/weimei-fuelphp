@@ -10,23 +10,23 @@ namespace app1;
  */
 class Controller_User extends Controller_Template {
 
-	public function before() {
-		parent::before();
-	}
+    public function before() {
+        parent::before();
+    }
 
-	public function action_reg(){
-		$this->template->content=\View::forge('content/user/reg');
-	}
+    public function action_reg(){
+        $this->template->content=\View::forge('content/user/reg');
+    }
 
-	public function action_login(){
-		$referrer=\Input::get('referrer')?\Input::get('referrer'):\Input::referrer();
-		$this->template->content=\View::forge('content/user/login');
-		$this->template->content->referrer=$referrer;
-	}
-	public function action_lost_pwd(){
-		$this->template->content=\View::forge('content/user/lost_pwd');
+    public function action_login(){
+        $referrer=\Input::get('referrer')?\Input::get('referrer'):\Input::referrer();
+        $this->template->content=\View::forge('content/user/login');
+        $this->template->content->referrer=$referrer;
+    }
+    public function action_lost_pwd(){
+        $this->template->content=\View::forge('content/user/lost_pwd');
 
-	}
+    }
 
 }
 

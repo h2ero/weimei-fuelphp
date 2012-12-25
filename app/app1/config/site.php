@@ -1,18 +1,18 @@
 <?php
 return array(
-		'css'=>array(
-				'base css'=>'base.css',
-				'fancybox css'=>'fancybox/jquery.fancybox-1.3.4.css',
-				),
-		'js'=>array(
-				'jquery'=>'jquery-1.7.2.min.js',
-				'less'=>'less-1.3.0.min.js',
-				'fancy box'=>'jquery.fancybox-1.3.4.js',
-				'main'=>'main.js',
-				'simple style'=>'simpleStyle.js',
-				),
-		'site_name'=>'唯美小站',
-		'title'=>'-唯美小站WeiMei.De',
-		'keywords'=>'site config keywords',
-		'description'=>'description'
+        'css'=>array(
+                'base css'=>'base.css',
+                'fancybox css'=>'fancybox/jquery.fancybox-1.3.4.css',
+                ),
+        'js'=>array(
+                'jquery'=>'jquery-1.7.2.min.js',
+                'less'=>'less-1.3.0.min.js',
+                'fancy box'=>'jquery.fancybox-1.3.4.js',
+                'main'=>'main.js',
+                'simple style'=>'simpleStyle.js',
+                ),
+        'site_name'=>'唯美小站',
+        'title'=>'-唯美小站WeiMei.De',
+        'keywords'=>'site config keywords',
+        'description'=>'description'
 );

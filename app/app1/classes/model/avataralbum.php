@@ -10,8 +10,8 @@ namespace app1;
 
 class Model_Avataralbum extends \Orm\Model{
 
-	protected static $_table_name='avatar_album';
-	protected static $_primary_key = array('id');
+    protected static $_table_name='avatar_album';
+    protected static $_primary_key = array('id');
 
 }
 ?>

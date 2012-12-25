@@ -8,7 +8,7 @@ namespace app1;
  */
 
 class Model_like extends \Orm\Model{
-	protected static $_table_name='pic';
-	protected static $_primary_key = array('id');
+    protected static $_table_name='pic';
+    protected static $_primary_key = array('id');
 }
 ?>

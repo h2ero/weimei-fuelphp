@@ -9,12 +9,12 @@ namespace app1;
  */
 
 class Controller_Comment extends Controller_Template{
-	public static function get_comment($target_id){
+    public static function get_comment($target_id){
 
-		$comment=Model_Comment::query()->where('target_id','=',$target_id)->related('user')->get();
-		return $comment;
+        $comment=Model_Comment::query()->where('target_id','=',$target_id)->related('user')->get();
+        return $comment;
 
-	}
+    }
 
 }
 ?>
