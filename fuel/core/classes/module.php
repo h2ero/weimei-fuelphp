@@ -88,6 +88,7 @@ class Module
 			throw new ModuleNotFoundException("Module '$module' could not be found at '".\Fuel::clean_path($path)."'");
 		}
 
+		\Finder::instance()->add_path($path, 1);
 		// determine the module namespace
 		$ns = '\\'.ucfirst($module);
 
