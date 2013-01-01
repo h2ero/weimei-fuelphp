@@ -34,7 +34,7 @@ return array(
 	 *
 	 * Set this to an empty string if no suffix is used
 	 */
-	'url_suffix'  => '',
+	'url_suffix'  => '.html',
 
 	/**
 	 * index_file - The name of the main bootstrap file.
@@ -226,7 +226,7 @@ return array(
 		 * );
 		 */
 		'packages'  => array(
-			//'orm',
+			'orm',
 		),
 
 		/**
