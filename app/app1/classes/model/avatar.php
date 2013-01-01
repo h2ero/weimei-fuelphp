@@ -35,7 +35,7 @@ class Model_Avatar extends \Orm\Model {
             ->limit($count)
             ->offset($page*$count)
             ->join('avatar')
-            ->on('avatar.id','=','avatar_album.id')
+            ->on('avatar.id','=','avatar_album.first_id')
             ->join('user')
             ->on('user.id','=','avatar_album.user_id')
             ->execute()
