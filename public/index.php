@@ -12,7 +12,14 @@ $app_list=array(
 $app=isset($app_list[SERVER_NAME])?$app_list[SERVER_NAME]:DEFAULT_APP;
 define('APP_NAME',$app);
 
-
+$user_agent=$_SERVER['HTTP_USER_AGENT'];
+$pattern='/(jikespider|baiduspider|sosospider|googlebot|360spider|bingbot|sogou)/i';
+preg_match($pattern,$user_agent,$ua);
+if($ua){
+    define('USER_AGENT',$ua[0]);
+}else{
+    define('USER_AGENT',FALSE);
+}
 
 /**
  * Set error reporting and display errors settings.  You will want to change these when in production.
