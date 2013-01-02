@@ -13,7 +13,6 @@ class Controller_Avatar extends \app1\Controller_Avatar
 {
     public function before(){
         parent::before();
-        $this->template->site_title=' - 晒头网www.h2ero.cn';
     }
     public function action_list($page=1) {
         $page=$page-1;
@@ -78,7 +77,8 @@ class Controller_Avatar extends \app1\Controller_Avatar
         $avatar = \app2\Model_Avatar::get_avatar($id);
         if ($avatar) {
             $this->template->content->avatar = $avatar;
-            if($avatar[0]['catalog_id']==10){
+            //$cid=$avatar[0]['catalog_id'];
+            if(strpos($avatar['0']['name'],'头像')!==false){
                 $this->template->title = $avatar[0]['name'];
             }else{
                 $this->template->title = "QQ{$avatar[0]['name']}头像大全_QQ空间{$avatar[0]['name']}高清头像";

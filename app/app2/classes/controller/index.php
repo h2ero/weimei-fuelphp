@@ -1,7 +1,7 @@
 <?php
-namespace app1;
+namespace app2;
 
-class Controller_index extends Controller_Template
+class Controller_index extends \app1\Controller_index
 {
 
     public function before() 
@@ -10,6 +10,12 @@ class Controller_index extends Controller_Template
     }
     public function action_index()
     {
+        //$this->template->nav_bar=\View::forge('content/index/nav-bar');
+        $avatar=Model_Avatar::get_list(0, 24);
+        $this->template->content=\View::forge('content/avatar/list');
+        $this->template->content->avatar= $avatar;
+        $this->template->pagelist=\View::forge('content/index/pagelist');
+        $this->template->link=\View::forge('content/index/link');
 
         //link
         $site_config=\Config::load('site',false,true);
@@ -19,10 +25,9 @@ class Controller_index extends Controller_Template
             ->order_by('id')
             ->execute()
             ->as_array();
-        $this->template->nav_bar=\View::forge('content/index/nav-bar');
-        $this->template->slogan=\View::forge('content/index/slogan');
-        $this->template->pagelist=\View::forge('content/index/pagelist');
+
         $this->template->link=\View::forge('content/index/link');
         $this->template->link->links=$links;
+        
     }
 }
