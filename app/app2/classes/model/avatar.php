@@ -27,11 +27,15 @@ class Model_Avatar extends \Orm\Model {
             ->on('user_id','=','user.id')
             ->execute()->as_array();
     }
-    public static function get_list($page,$count){
+    public static function get_list($page,$count,$catalog_id=''){
 
-        return \DB::select('avatar_album.name','dir_name','avatar_album.id','src','username','user_id','date')
-            ->from('avatar_album')
-            ->order_by('album_id','desc')
+        $DB = \DB::select('avatar_album.name','dir_name','avatar_album.id','src','username','user_id','date')
+            ->from('avatar_album');
+        if($catalog_id){
+            $DB->where('catalog_id','=',$catalog_id);
+        }
+
+        return $DB->order_by('album_id','desc')
             ->limit($count)
             ->offset($page*$count)
             ->join('avatar')
@@ -42,7 +46,6 @@ class Model_Avatar extends \Orm\Model {
             ->on('user.id','=','avatar_album.user_id')
             ->execute()
             ->as_array();
-
     }
 }
 

@@ -42,6 +42,36 @@ class Controller_Avatar extends \app1\Controller_Avatar
         }
 
     }
+
+    public function action_alist($page=1,$class='all'){
+
+        $page=$page-1;
+        $catalog=\DB::select('id','name')->from('catalog')->where('dir_name','=',$class)->execute();
+        $catalog_id=$catalog[0]['id'];
+        $count=\DB::select(\DB::expr('count(*) as count'))->from('avatar_album')->where('catalog_id','=',$catalog_id)->execute();
+
+        $config = array(
+            'pagination_url' => "/$class/alist/",
+            'total_items' => $count[0]['count'],
+            'per_page' => 12,
+            'uri_segment' => 2,
+        );
+
+        $pagination = \Pagination::forge('avatar_pagination', $config);
+        $this->template->set('pagination',$pagination->render(),FALSE);
+        $avatar=Model_Avatar::get_list($page, $config['per_page'],$catalog_id);
+        if($avatar){
+
+            $this->template->title = "QQ{$catalog[0]['name']}头像";
+            $this->template->content = \View::forge('content/avatar/list');
+            $this->template->content->avatar= $avatar;
+
+        }else{
+
+            \Response::redirect('error/404');
+
+        }
+    }
     public function action_content($id = 1) {
         $target_id = 'a' . $id;
         $this->template->content = \View::forge('content/avatar/content');
