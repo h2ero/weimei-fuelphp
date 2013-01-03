@@ -61,6 +61,62 @@ class Controller_Avatar extends Controller_Template {
             \Response::redirect('/error/404');
         }
     }
+    public function action_upload(){
+
+        $album_id=\Cookie::get('album_id');
+        if(!$album_id){
+            $album_id=Model_Avatar::init_upload();
+            $album_id=$album_id[0]['id'];
+            \Cookie::set('album_id', $album_id , 60 * 60 * 24*365);
+        }
+        $site_config=\Config::load('site',false,true);
+        $this->template->js=array_merge($site_config['js'],$site_config['upload_js']);
+        $this->template->css=array_merge($site_config['css'],$site_config['upload_css']);
+        $this->template->vars=array(
+            'user_id'=>1,
+            'album_id'=>$album_id,
+        );
+        $this->template->content = \View::forge('content/avatar/upload');
+        $this->template->content->catalogs=Model_Avatar::get_catalog();
+    }
+    public function action_do_upload(){
+
+        //auto_render false
+        $this->template='';
+        $album_id=\Input::post('album_id');
+
+        $avatar_path='uploads/2013/a'.date('m').'/';
+        $config = array(
+            'path' => DOCROOT.$avatar_path,
+            'randomize' => true,
+            'ext_whitelist' => array('img', 'jpg', 'jpeg', 'gif', 'png'),
+        );
+
+        //new folder
+        if (!is_dir($config['path']))
+            mkdir($config['path'],0755,true);
+        
+        \Upload::process($config);
+        
+        if (\Upload::is_valid())
+        {
+            \Upload::save();
+            $file=\Upload::get_files();
+            $src='/'.$avatar_path.$file[0]['saved_as'];
+            Model_Avatar::add_avatar($src,$album_id);
+        }else{
+        }
+        
+        //$file=\Upload::get_errors();
+        //echo $file[0]['error'];
+
+    }
+    public function action_submit_upload(){
+        $album_id=\Cookie::get('album_id');
+        $album_name=\Input::post('album_name');
+        $catalog_id=\Input::post('catalog_id');
+        Model_Avatar::update_avatar_album($album_id,$album_name,$catalog_id);
+    }
 
 }
 

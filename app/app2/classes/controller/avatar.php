@@ -80,8 +80,10 @@ class Controller_Avatar extends \app1\Controller_Avatar
             //$cid=$avatar[0]['catalog_id'];
             if(strpos($avatar['0']['name'],'头像')!==false){
                 $this->template->title = $avatar[0]['name'];
+                $this->template->keywords = "{$avatar[0]['name']}";
             }else{
                 $this->template->title = "QQ{$avatar[0]['name']}头像大全_QQ空间{$avatar[0]['name']}高清头像";
+                $this->template->keywords= "QQ{$avatar[0]['name']}头像大全,QQ空间{$avatar[0]['name']}高清头像";
             }
 
             //widget

@@ -31,6 +31,11 @@
 <?php } ?>
 </div>
 <div class="avatarDesc">
+<?php
+if(strpos('头像',$a['name'])===false&&USER_AGENT!=false){
+    $a['name']='QQ'.$a['name'].'头像.'.$a['name'].'QQ空间头像';
+}
+?>
 <?php if($a['dir_name']=='quntouxiang'||$a['dir_name']=='fabiao'){?>
     <a href="/<?=$a['dir_name']?>/qq<?=$a['id']?>.html"><?=$a['name'];?></a>
 <?php }else{ ?>

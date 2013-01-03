@@ -42,6 +42,52 @@ class Model_Avatar extends \Orm\Model {
             ->as_array();
 
     }
+    public static function get_catalog(){
+        return \DB::select('id','name')
+            ->from('catalog')
+            ->where('ref_table','=','avatar_album')
+            ->execute()
+            ->as_array();
+    }
+    public static function init_upload(){
+        \DB::insert('avatar_album')
+            ->set(array(
+                'name'=>'',
+                'date'=>date('Y-m-d H:i:s'),
+                'user_id'=>'1',//\Cookie::get('user_id');
+            ))
+            ->execute();
+        return \DB::select(\DB::expr('LAST_INSERT_ID() AS id'))
+            ->execute();
+    }
+    public static function add_avatar($src,$album_id){
+        \DB::insert('avatar')
+            ->set(array(
+                'src'=>$src,
+                'album_id'=>$album_id,
+            ))
+            ->execute();
+    }
+    public static function update_avatar_album($album_id,$album_name,$catalog_id){
+        $first=\DB::select('id')
+            ->from('avatar')
+            ->where('album_id','=',$album_id)
+            ->order_by('id','desc')
+            ->limit(1)
+            ->execute();
+        var_dump($first);
+        $first_id=$first[0]['id'];
+        echo $first_id;
+        \DB::update('avatar_album')
+            ->set(array(
+                'name'=>$album_name,
+                'catalog_id'=>$catalog_id,
+                'first_id'=>$first_id,
+            ))
+            ->where('id','=',$album_id)
+            ->execute();
+
+    }
 }
 
 ?>

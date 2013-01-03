@@ -1,5 +1,8 @@
 <?php
 return array(
+    'avatar/submit_upload'=>APP_NAME.'/avatar/submit_upload',
+    'avatar/upload'=>APP_NAME.'/avatar/upload',
+    'avatar/do_upload'=>APP_NAME.'/avatar/do_upload',
     'avatar/list/(.*)'=>APP_NAME.'/avatar/list/$1',
     'avatar/(.*)'=>APP_NAME.'/avatar/content/$1',
     'avatar'=>APP_NAME.'/avatar/list/1',

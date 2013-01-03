@@ -168,7 +168,18 @@ Class Helper {
         $r[1][1][0] = $a - $res[0];
         return $r;
     }
+    static function array2var($vars=''){
 
+        if($vars==''){
+            return '';
+        }else{
+            $var="";
+            foreach($vars as $k=>$v){
+                $var.="var $k=$v;\r\n";
+            }
+            return $var;
+        }
+    }
 }
 
 ?>

@@ -9,7 +9,14 @@ return array(
                 'less'=>'less-1.3.0.min.js',
                 'fancy box'=>'jquery.fancybox-1.3.4.js',
                 'main'=>'main.js',
-                'simple style'=>'simpleStyle.js',
+                ),
+        'upload_js'=>array(
+                'swfobject'=>'swfobject.js',
+                'uploadify'=>'jquery.uploadify.min.js',
+                'upload'=>'upload.js',
+                ),
+        'upload_css'=>array(
+                'upload'=>'uploadify.css',
                 ),
         'site_name'=>'唯美小站',
         'title'=>'-唯美小站WeiMei.De',

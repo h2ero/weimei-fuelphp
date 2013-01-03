@@ -7,13 +7,15 @@ $(function(){
 	/*图片对齐*/
 	//$('.pic-desc').hide();
 	//pageCount count-prePageCount
-	var pageCount=$('#pic').attr('data-count');
-	var countArr=pageCount.split('-');
-	if(parseInt(countArr[0])>parseInt(countArr[1])){
-	$('.pic-list').each(function(){
-		$('.pic-item:first',$(this)).css('height',$(this).attr('data-h'));
-	});
-	}
+    if($('#pic').length){
+	    var pageCount=$('#pic').attr('data-count');
+	    var countArr=pageCount.split('-');
+	    if(parseInt(countArr[0])>parseInt(countArr[1])){
+	    $('.pic-list').each(function(){
+	    	$('.pic-item:first',$(this)).css('height',$(this).attr('data-h'));
+	    });
+	    }
+    }
 	/*图片信息提示*/
 	$('.pic-item').hover(function(){
 		$('.pic-desc',this).css({"opacity":"0.8"}).stop().animate({top:'0'},300);//show();

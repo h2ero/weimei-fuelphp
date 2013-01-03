@@ -12,6 +12,7 @@
         <?php echo Asset::css($css);?>
         <?php echo Asset::js($js);?>
         <script type="text/javascript">
+            <?php echo Helper::array2var($vars); ?>
         </script>
     </head>
     <body>

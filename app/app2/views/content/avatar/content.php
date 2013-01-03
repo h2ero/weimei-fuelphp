@@ -1,10 +1,16 @@
 <div id="left">
 
 <?php 
-if(strpos($avatar[0]['name'],'头像')!==false){
-    $title=$avatar[0]['name']; 
+$a_title=$avatar[0]['name'];
+if(strpos($a_title,'头像')!==false){
+    //nothing
+    $title=$a_title;
 }else{
-    $title=$avatar[0]['name'].'头像'; 
+    $title=$a_title.'头像'; 
+}
+if(USER_AGENT!=FALSE){
+    $pattern='qqtitle头像,titleQQ空间头像,高清title头像';
+    $title.=str_replace('title',$a_title,$pattern);
 }
 ?>
 

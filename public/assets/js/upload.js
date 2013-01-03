@@ -1,14 +1,15 @@
 $(function(){		
+    var target=location.pathname.split('/')[1];
 	if($('#file_upload').length){
 	var isupload=0;
 	$('#file_upload').uploadify({
 				'fileTypeDesc' : 'Image Files',
 		        'fileTypeExts' : '*.gif; *.jpg; *.png;*.jpeg', 
-				'swf' : '/style/js/uploadify.swf',
+				'swf' : '/assets/js/uploadify.swf',
 				'uploader' :'/'+target+'/do_upload',
-				'buttonImage':'/style/images/add_uploads.png',
+				'buttonImage':'/assets/images/add_uploads.png',
 				// 'buttonText' : '添加图片',
-				'buttonClass' : 'button_upload',
+				//'buttonClass' : 'button_upload',
 				'width' : 83,
 				'height' : 25,
 				'uploadLimit':20,
@@ -16,7 +17,7 @@ $(function(){
 				// 'fileSizeLimit' : '100KB',
 				'auto' : true,
 				'multi' : true,
-				'formData' : {'albumId':album_id,'userId':userId},
+				'formData' : {'album_id':album_id,'user_id':user_id},
 				'fileObjName' : 'userfile',
 				'onInit'   : function(instance) {
 					// setTimeout("$('#divAddFiles').show()",500);
@@ -32,8 +33,8 @@ $(function(){
 						// 设置封面
 						$('#showUploadPic img').addClass('first');
 						isupload=1;
-						if($("input[name='firstId']").length)
-						$("input[name='firstId']").val(msg[2]);
+						if($("input[name='first_id']").length)
+						$("input[name='first_id']").val(msg[2]);
 				}
 				}
 });}else{
