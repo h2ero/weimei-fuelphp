@@ -10,10 +10,10 @@
         <!-- Date: 2011-10-23 -->
         <link rel="stylesheet/less" href="/assets/css/style.less">
         <?php echo Asset::css($css);?>
-        <?php echo Asset::js($js);?>
         <script type="text/javascript">
             <?php echo Helper::array2var($vars); ?>
         </script>
+        <?php echo Asset::js($js);?>
     </head>
     <body>
 <div id="container">

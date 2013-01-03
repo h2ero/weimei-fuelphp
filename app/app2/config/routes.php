@@ -34,6 +34,8 @@ return array(
     'article'=>APP_NAME.'/article/list/1',
     //tag
     'tag/(.*)'=>APP_NAME.'/tag/search/$1',
+    //tool
+    'tool'=>APP_NAME.'/tool/import_tag',
 
     //default
     '_root_'  => APP_NAME.'/index',  // The default route

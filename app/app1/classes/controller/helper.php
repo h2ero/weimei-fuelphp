@@ -175,7 +175,7 @@ Class Helper {
         }else{
             $var="";
             foreach($vars as $k=>$v){
-                $var.="var $k=$v;\r\n";
+                $var.="var $k='$v';\r\n";
             }
             return $var;
         }

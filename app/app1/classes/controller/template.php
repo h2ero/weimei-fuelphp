@@ -13,7 +13,10 @@ class Controller_Template extends \Controller_Template{
         $site_config=\Config::load('site');
         $this->template->css=$site_config['css'];
         $this->template->js=$site_config['js'];
-        $this->template->vars='';
+
+        $this->template->vars=array(
+            'color'=>$site_config['theme']['color'],
+        );
         
         $this->template->footer->site_name=$site_config['site_name'];
         $this->template->title='';

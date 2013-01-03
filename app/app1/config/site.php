@@ -18,6 +18,10 @@ return array(
         'upload_css'=>array(
                 'upload'=>'uploadify.css',
                 ),
+        //theme
+        'theme'=>array(
+                'color'=>'#FF4F73',
+                ),
         'domain_id'=>'1',
         'site_name'=>'唯美小站',
         'title'=>'唯美小站WeiMei.De',

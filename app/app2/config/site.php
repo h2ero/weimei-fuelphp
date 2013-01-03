@@ -11,6 +11,10 @@ return array(
                 'main'=>'main.js',
                 'simple style'=>'simpleStyle.js',
                 ),
+        //theme
+        'theme'=>array(
+                'color'=>'#327FB5',
+                ),
         'domain_id'=>2,
         'site_name'=>'晒头网',
         'title'=>'晒头网www.h2ero.cn',
