@@ -16,6 +16,17 @@ return array(
         'color'=>'#327FB5',
         'header_bgcolor'=>'#000000',
         ),
+
+    //catelog title rule
+    'title_rules'=>array(
+            'pic'=>array(
+                'title'=>'title高清唯美意境图片大全',
+                ),
+            'avatar'=>array(
+                'title'=>'QQtitle头像大全,QQ空间title高清头像',
+                ),
+        ),
+
     'domain_id'=>2,
     'site_name'=>'晒头网',
     'title'=>'晒头网www.h2ero.cn',

@@ -10,7 +10,8 @@ class Controller_Template extends \Controller_Template{
         
         $this->template->header=\View::forge('template/header');
         $this->template->footer=\View::forge('template/footer');
-        $site_config=\Config::load('site');
+        $this->site_config=\Config::load('site');
+        $site_config=$this->site_config;
         $this->template->css=$site_config['css'];
         $this->template->js=$site_config['js'];
 
@@ -37,6 +38,11 @@ class Controller_Template extends \Controller_Template{
         $this->template->pagination='';
     }
     public function action_index(){
+    }
+    public function get_title($title,$catalog){
+        $site_config=$this->site_config;
+        $title_rule=$site_config['title_rules'][$catalog]['title'];
+        return str_replace('title',$title,$title_rule);
     }
     
 }

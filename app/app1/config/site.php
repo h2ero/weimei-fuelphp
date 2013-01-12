@@ -1,28 +1,40 @@
 <?php
 return array(
     'css'=>array(
-        'base css'=>'base.css',
-        'fancybox css'=>'fancybox/jquery.fancybox-1.3.4.css',
+            'base css'=>'base.css',
+            'fancybox css'=>'fancybox/jquery.fancybox-1.3.4.css',
         ),
     'js'=>array(
-        'jquery'=>'jquery-1.7.2.min.js',
-        'less'=>'less-1.3.0.min.js',
-        'fancy box'=>'jquery.fancybox-1.3.4.js',
-        'main'=>'main.js',
+            'jquery'=>'jquery-1.7.2.min.js',
+            'less'=>'less-1.3.0.min.js',
+            'fancy box'=>'jquery.fancybox-1.3.4.js',
+            'main'=>'main.js',
         ),
     'upload_js'=>array(
-        'swfobject'=>'swfobject.js',
-        'uploadify'=>'jquery.uploadify.min.js',
-        'upload'=>'upload.js',
+            'swfobject'=>'swfobject.js',
+            'uploadify'=>'jquery.uploadify.min.js',
+            'upload'=>'upload.js',
         ),
     'upload_css'=>array(
-        'upload'=>'uploadify.css',
+            'upload'=>'uploadify.css',
         ),
+
     //theme
     'theme'=>array(
-        'color'=>'#FF4F73',
-        'header_bgcolor'=>'#FFFFFF',
+            'color'=>'#FF4F73',
+            'header_bgcolor'=>'#FFFFFF',
         ),
+
+    //catelog title rule
+    'title_rules'=>array(
+            'pic'=>array(
+                'title'=>'title高清唯美图片',
+                ),
+            'avatar'=>array(
+                'title'=>'QQtitle头像大全,QQ空间title高清头像',
+                ),
+        ),
+
     'domain_id'=>'1',
     'site_name'=>'唯美小站',
     'title'=>'唯美小站WeiMei.De',

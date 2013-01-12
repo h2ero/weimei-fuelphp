@@ -45,7 +45,7 @@ class Controller_Pic extends Controller_Template {
             $this->template->content->user_pic=Model_Pic::user_pic();
 
             $this->template->content->pic=$pic[0];
-            $this->template->title = $pic[0]['name'];
+            $this->template->title = $this->get_title($pic[0]['name'],'pic');
             //widget
             $this->template->content->like = \View::forge('template/widget/like');
             $this->template->content->like->like_count = $pic[0]['like_count'];
