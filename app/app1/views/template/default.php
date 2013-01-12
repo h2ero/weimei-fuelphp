@@ -11,6 +11,9 @@
         <link rel="stylesheet/less" href="/assets/css/style.less">
         <?php echo Asset::css($css);?>
         <script type="text/javascript">
+            //baidu 
+            var _hmt = _hmt || [];
+            //site variable
             <?php echo Helper::array2var($vars); ?>
         </script>
         <?php echo Asset::js($js);?>
@@ -29,5 +32,11 @@
     <?php echo $footer;?>
 </div>
 <!--container-->
+    <div style="display:none">
+        <script type="text/javascript">
+            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fbd6244c2b3babb59df268052290f0b20' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+    </div>
     </body>
 </html>

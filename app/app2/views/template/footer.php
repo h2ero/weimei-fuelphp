@@ -8,5 +8,4 @@
     </div>
     <div class="fn-clear"></div>
 </div>
-<div style="display:none"><script language="javascript" type="text/javascript" src="http://js.users.51.la/3033548.js"></script></div>
 <!--footer-->
