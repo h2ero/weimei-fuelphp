@@ -39,14 +39,22 @@ class Model_Pic extends \Orm\Model {
             ->where("id",'=',\DB::expr("(SELECT max(id) FROM `pic` WHERE `id` < '$id')"))
             ->execute()
             ->as_array();
-        $data['pre']=$data['pre'][0];
+        if(isset($data['pre'][0])){
+            $data['pre']=$data['pre'][0];
+        }else{
+            $data['pre']=NULL;
+        }
 
         $data['next']=\DB::select('src','id','name')
             ->from('pic')
             ->where("id",'=',\DB::expr("(SELECT min(id) FROM `pic` WHERE `id` > '$id')"))
             ->execute()
             ->as_array();
-        $data['next']=$data['next'][0];
+        if(isset($data['next'][0])){
+            $data['next']=$data['next'][0];
+        }else{
+            $data['next']=NULL;
+        }
         return $data;
     }
     public static function user_pic(){
