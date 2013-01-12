@@ -16,7 +16,7 @@ return array(
 	    	'host'	      => '127.0.0.1',
 	    	'username'    => 'h2ero',
 	    	'password'    => '',
-	    	'database'    => 'weimei',
+	    	'database'    => 'weimei2',
 		'connection'  => array(
 			'persistent' => false,
 		),
