@@ -14,7 +14,7 @@ return array(
 	'default' => array(
 		'type'        => 'pdo',
 	    	'host'	      => '127.0.0.1',
-	    	'username'    => 'root',
+	    	'username'    => 'h2ero',
 	    	'password'    => '',
 	    	'database'    => 'weimei',
 		'connection'  => array(
