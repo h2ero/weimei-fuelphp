@@ -14,6 +14,7 @@ return array(
     //theme
     'theme'=>array(
         'color'=>'#327FB5',
+        'header_bgcolor'=>'#000000',
         ),
     'domain_id'=>2,
     'site_name'=>'晒头网',

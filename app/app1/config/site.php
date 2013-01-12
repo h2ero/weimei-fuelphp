@@ -21,7 +21,7 @@ return array(
     //theme
     'theme'=>array(
         'color'=>'#FF4F73',
-        'logo' => '/assets/images/logo.png',
+        'header_bgcolor'=>'#FFFFFF',
         ),
     'domain_id'=>'1',
     'site_name'=>'唯美小站',

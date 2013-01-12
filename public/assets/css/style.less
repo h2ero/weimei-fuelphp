@@ -15,6 +15,7 @@
 
 /*variable*/
 @color: color(`color`);
+@header_bgcolor: color(`header_bgcolor`);
 
 /*base2*/
 body{
@@ -62,7 +63,7 @@ h1{
     margin: 0px auto;
     /*width: 900px;*/
     #header{
-        background: url("/assets/images/top_bg.jpg") repeat-x scroll 0 85px #FFFFFF;
+        background: url("/assets/images/top_bg.jpg") repeat-x scroll 0 85px @header_bgcolor;
         padding-bottom: 15px;
         height:75px;
         //border-bottom: 1px inset #CCCCCC;
@@ -90,7 +91,7 @@ h1{
                  padding-right: 22px;
                  text-decoration: none;
                  &:hover{
-                    color:#000000;
+                    color:#FFFFFF;
                  }
               }
              .m-popular{

@@ -1,6 +1,6 @@
 <div id="header">
         <div id="inner-header">
-            <a id="logo" href="/"><img src="/assets/images/logo.png" id="logo"></a>
+            <a id="logo" href="/"><img src="/assets/images/logos/<?php echo $domain_id;?>.png" id="logo"></a>
             <div id="menu">
                 <a href="/pic/"><img alt="" src="/assets/images/img.png"></a>
                 <a href="/article/"><img alt="" src="/assets/images/text.png"></a>
