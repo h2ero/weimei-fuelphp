@@ -26,6 +26,7 @@ class Controller_index extends \app1\Controller_index
             ->execute()
             ->as_array();
 
+        $this->template->site_title=$site_config['index_title'];
         $this->template->link=\View::forge('content/index/link');
         $this->template->link->links=$links;
         

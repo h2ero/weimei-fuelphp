@@ -28,6 +28,7 @@ return array(
         ),
 
     'domain_id'=>2,
+    'index_title'=>'2013qq情侣头像 高清头像 非主流可爱女生头像 好看的qq空间头像 男生个性头像 唯美意境头像',
     'site_name'=>'晒头网',
     'title'=>'晒头网www.h2ero.cn',
     'keywords'=>'qq情侣头像,好看的qq空间头像,qq女生头像,可爱头像,高清头像,唯美头像,意境头像,唯美意境',
