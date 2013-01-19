@@ -44,9 +44,11 @@ class Model_tag extends \Orm\Model{
             }
         }
         if ($a_id){
-            $result = \DB::select('avatar_album.id','name','date','username')
+            $result = \DB::select('avatar_album.id','avatar_album.name','dir_name','date','username')
                 ->from('avatar_album')
                 ->where('avatar_album.id','IN',$a_id)
+                ->join('catalog')
+                ->on('avatar_album.catalog_id','=','catalog.id')
                 ->join('user')
                 ->on('avatar_album.user_id','=','user.id')
                 ->execute()
