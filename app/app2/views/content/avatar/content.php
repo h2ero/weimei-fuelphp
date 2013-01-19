@@ -16,6 +16,8 @@ if(USER_AGENT!=FALSE){
 
 <h1 id="title"><?=$title?></h1>
 <div class="height1"></div>
+<div class="ads300"><?php Helper::get_ads('content-left*300');?></div>
+<div class="ads300"><?php Helper::get_ads('content-right*300');?></div>
 <div id="avatarShowAll">
 <div style="display: none; left: 301px; top: 466px;" id="show"><img src="/uploads/20120303/1330773474_562.jpg"></div>
 <?php foreach($avatar as $a){ ?>

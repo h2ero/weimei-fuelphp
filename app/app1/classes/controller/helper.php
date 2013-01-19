@@ -180,6 +180,10 @@ Class Helper {
             return $var;
         }
     }
+    static function get_ads($name){
+        $ads = \app1\Model_Ads::get_code($name);
+        echo $ads[0]['code'];
+    }
 }
 
 ?>

@@ -9,3 +9,4 @@
     <div class="fn-clear"></div>
 </div>
 <!--footer-->
+<div class="ads300"><?php Helper::get_ads('footer-float');?></div>
