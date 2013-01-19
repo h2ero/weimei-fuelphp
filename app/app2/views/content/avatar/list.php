@@ -18,7 +18,7 @@
 |
 <a href="/jiemei/alist/">姐妹头像</a>
 </span>
-<span id="create"><a href="/avatar/upload">发布照片</a></span></div>
+<!-- <span id="create"><a href="/avatar/upload">发布照片</a></span>--></div>
 
 <div id="avatar">
 <?php foreach ($avatar as $a) { ?>
