@@ -116,6 +116,7 @@ class Controller_Avatar extends Controller_Template {
         $album_name=\Input::post('album_name');
         $catalog_id=\Input::post('catalog_id');
         Model_Avatar::update_avatar_album($album_id,$album_name,$catalog_id);
+        \Cookie::delete('album_id');
     }
 
 }
