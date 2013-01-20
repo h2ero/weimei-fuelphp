@@ -33,6 +33,9 @@ return array(
             'avatar'=>array(
                 'title'=>'QQtitle头像大全,QQ空间title高清头像',
                 ),
+            'tag' => array(
+                'title' => '和title相关的文章，头像，图片;', 
+                )
         ),
 
     'domain_id'=>'1',

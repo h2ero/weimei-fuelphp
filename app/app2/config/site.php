@@ -25,6 +25,9 @@ return array(
             'avatar'=>array(
                 'title'=>'QQtitle头像大全,QQ空间title高清头像',
                 ),
+            'tag' => array(
+                'title' => 'title头像，高清title图片;', 
+                )
         ),
 
     'domain_id'=>2,
