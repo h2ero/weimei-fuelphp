@@ -1,0 +1,21 @@
+.container-fluid
+{
+    margin-top: 45px;
+}
+
+.nav-list li:first-child a{
+    border-radius:6px 6px 0 0;
+}
+.nav-list li:last-child a{
+    border-radius:0 0 6px 6px;
+}
+.nav-list li a{
+    border: 1px solid #E5E5E5;
+    display: block;
+    margin: 0 0 -1px;
+    padding: 8px 14px;
+}
+
+.nav-list li a i{
+    float:right;
+}
