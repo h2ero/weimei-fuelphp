@@ -27,6 +27,17 @@ class Model_Avatar extends \Orm\Model {
             ->on('user_id','=','user.id')
             ->execute()->as_array();
     }
+    public static function get_similar_list($id,$catalog_id){
+        return \DB::select('avatar_album.id','avatar_album.name','catalog.dir_name')
+            ->from('avatar_album')
+            ->join('catalog')
+            ->on('avatar_album.catalog_id','=','catalog.id')
+            ->where('avatar_album.catalog_id','=',$catalog_id)
+            ->where('avatar_album.id','<',$id)
+            ->limit(10)
+            ->execute()
+            ->as_array();
+    }
     public static function get_list($page,$count){
 
         return \DB::select('name','avatar_album.id','src','username','user_id','date')
@@ -86,7 +97,6 @@ class Model_Avatar extends \Orm\Model {
             ))
             ->where('id','=',$album_id)
             ->execute();
-
     }
 }
 

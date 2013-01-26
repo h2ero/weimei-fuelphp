@@ -57,6 +57,7 @@ class Controller_Avatar extends Controller_Template {
             $this->template->content->comment->comment = Model_Comment::get_comment($target_id);
             $this->template->content->tag = \View::forge('template/widget/tag');
             $this->template->content->tag->tag = Model_Tag::get_tag($target_id);
+            $this->template->content->similar_list = \View::forge('template/widget/similar_list');
         } else {
             \Response::redirect('/error/404');
         }

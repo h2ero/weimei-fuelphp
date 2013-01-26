@@ -94,6 +94,8 @@ class Controller_Avatar extends \app1\Controller_Avatar
             $this->template->content->comment->comment = \app1\Model_Comment::get_comment($target_id);
             $this->template->content->tag = \View::forge('template/widget/tag');
             $this->template->content->tag->tag = \app1\Model_Tag::get_tag($target_id);
+            $this->template->content->similar_list = \View::forge('template/widget/similar_list');
+            $this->template->content->similar_list->similar_list = Model_Avatar::get_similar_list($id,$avatar[0]['catalog_id']);
         } else {
             \Response::redirect('/error/404');
         }

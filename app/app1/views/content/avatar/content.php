@@ -19,6 +19,7 @@
     </div>
     <!-- right user msg end-->
 <?php echo $tag ?>
+<?php echo $similar_list ?>
     
 </div>
 <div class="fn-clear"></div>

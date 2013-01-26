@@ -8,13 +8,7 @@ namespace app2;
  * @link http://blog.h2ero.cn
  */
 
-class Model_Avatar extends \Orm\Model {
-
-    protected static $_table_name='avatar';
-    protected static $_primary_key = array('id');
-    protected static $_conditions = array(
-        'order_by' => array('id' => 'desc'),
-            );
+class Model_Avatar extends \app1\Model_Avatar {
 
     public static function get_avatar($id){
 
