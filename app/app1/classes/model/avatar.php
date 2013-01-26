@@ -34,6 +34,7 @@ class Model_Avatar extends \Orm\Model {
             ->on('avatar_album.catalog_id','=','catalog.id')
             ->where('avatar_album.catalog_id','=',$catalog_id)
             ->where('avatar_album.id','<',$id)
+            ->order_by('id','desc')
             ->limit(10)
             ->execute()
             ->as_array();
