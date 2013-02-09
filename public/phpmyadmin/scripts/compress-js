@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+for file in `find js -name '*.js' -not -name '*min.js'` ; do
+    mkdir -p sources/`dirname $file`
+    yui-compressor $file > $file.tmp
+    cp -a $file sources/$file
+    mv $file.tmp $file
+done
